@@ -141,6 +141,10 @@ $wgEmbedVideoServiceList = array(
 		'default_ratio' => 300 / 200
 	),
 	'vimeo' => array(
-		'url'=>'http://vimeo.com/moogaloop.swf?clip_id=$1&;server=vimeo.com&fullscreen=0&show_title=1&show_byline=1&show_portrait=0'
+		'extern' =>
+			'<iframe src="http://player.vimeo.com/video/$2" ' .
+				'width="$3" height="$4" ' .
+				'frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>',
+		'default_ratio' => 16 / 9
 	)
 );
