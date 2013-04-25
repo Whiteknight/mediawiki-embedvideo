@@ -11,6 +11,23 @@ $messages['en'] = array(
 		'embedvideo-illegal-alignment' => 'EmbedVideo was given an illegal value for the alignment parameter "$1".  Valid values are "right", "left", "center", or "auto".',
                 'embedvideo-illegal-screen9-id' => 'EmbedVideo failed to interpret the screen9 id.  Note that the id of a screen9 video is the full html-snippet obtained from the video for embedding.',
 );
+
+/** French (Français)
+ * @author @lespacedunmatin
+ */
+$messages['fr'] = array(
+		'embedvideo-desc' => 'Ajoute une fonction d\'analyse (un raccourci) pour intégrer des vidéos venant de sites de partages courantes.',
+		'embedvideo-missing-params' => 'EmbedVideo a besoin d\un paramètre obligatoire qui est absent.',
+		'embedvideo-bad-params' => 'EmbedVideo a reçu un paramètre incorrect.',
+		'embedvideo-unparsable-param-string' => 'EmbedVideo a reçu un paramètre non analysable&nbsp;: "<tt>$1</tt>".',
+		'embedvideo-unrecognized-service' => 'EmbedVideo ne reconnait pas le site de vidéos "<tt>$1</tt>".',
+		'embedvideo-bad-id' => 'EmbedVideo a reçu l\'id incorrect "$1" pour le site "$2".',
+		'embedvideo-illegal-width' => 'EmbedVideo a reçu un paramètre de largeur incorrect&nbsp;: "$1".',
+		'embedvideo-illegal-alignment' => 'EmbedVideo a reçu une valeur invalide pour le paramètre d\'alignement "$1". Les valeurs Valides sont "right" (droite), "left" (gauche), "center" (centre), ou "auto" (automatique).',
+                'embedvideo-illegal-screen9-id' => 'EmbedVideo a échoué à interprêter l\'id screen9. Notez que l\'id d\'une vidéo screen9 est le code html entier obtenu depuis le site pour l\'intégration de la vidéo.',
+); 
+
+
 /** Russian (Русский)
  * @author P@S@f
  */
