@@ -118,20 +118,20 @@ $wgEmbedVideoServiceList = array(
 	),
 	'youtube' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1" ' .
+			'<iframe src="https://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 	),
 	'youtubehd' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1&amp;hd=1" ' .
+			'<iframe src="https://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1&amp;hd=1" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 		'default_ratio' => 16 / 9
 	),
 	'youtubeplaylist' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/videoseries?showsearch=0&amp;modestbranding=1&amp;list=$2" ' .
+			'<iframe src="https://www.youtube.com/embed/videoseries?showsearch=0&amp;modestbranding=1&amp;list=$2" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 		'default_ratio' => 16 / 9
