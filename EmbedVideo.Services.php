@@ -1,13 +1,15 @@
 <?php
 
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+
 // Build services list (may be augmented in LocalSettings.php)
 $wgEmbedVideoServiceList = array(
 	'bambuser' => array(
-		'extern' => '<iframe src="http://embed.bambuser.com/broadcast/$2" width="$3" height="$4" frameborder="0"></iframe>',
+		'extern' => '<iframe src="'.$protocol.'embed.bambuser.com/broadcast/$2" width="$3" height="$4" frameborder="0"></iframe>',
 		'default_ratio' => 512 / 394
 	),
 	'bambuser_channel' => array(
-		'extern' => '<iframe src="http://embed.bambuser.com/channel/$2" width="$3" height="$4" frameborder="0"></iframe>',
+		'extern' => '<iframe src="'.$protocol.'embed.bambuser.com/channel/$2" width="$3" height="$4" frameborder="0"></iframe>',
 		'default_ratio' => 512 / 394
 	),
 	'bing' => array(
@@ -17,7 +19,7 @@ $wgEmbedVideoServiceList = array(
 		'extern' => '<iframe style="overflow: hidden;" src="http://hub.video.msn.com/embed/$2" width="$3" height="$4" frameborder="0" scrolling="no" noscroll></iframe>'
 	),
 	'dailymotion' => array(
-		'url' => 'http://www.dailymotion.com/swf/$1'
+		'url' => $protocol.'www.dailymotion.com/swf/$1'
 	),
 	'divshare' => array(
 		'url' => 'http://www.divshare.com/flash/video2?myId=$1',
@@ -118,29 +120,29 @@ $wgEmbedVideoServiceList = array(
 	),
 	'youtube' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1" ' .
+			'<iframe src="'.$protocol.'www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 	),
 	'youtubehd' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1&amp;hd=1" ' .
+			'<iframe src="'.$protocol.'www.youtube.com/embed/$2?showsearch=0&amp;modestbranding=1&amp;hd=1" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 		'default_ratio' => 16 / 9
 	),
 	'youtubeplaylist' => array(
 		'extern' =>
-			'<iframe src="http://www.youtube.com/embed/videoseries?showsearch=0&amp;modestbranding=1&amp;list=$2" ' .
+			'<iframe src="'.$protocol.'www.youtube.com/embed/videoseries?showsearch=0&amp;modestbranding=1&amp;list=$2" ' .
 				'width="$3" height="$4" ' .
 				'frameborder="0" allowfullscreen="true"></iframe>',
 		'default_ratio' => 16 / 9
 	),
 	'videomaten' => array(
-		'extern' => '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="300" height="200" id="videomat" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://89.160.51.62/recordMe/play.swf?id=$2" /><param name="loop" value="false" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://89.160.51.62/recordMe/play.swf?id=$2" loop="false" quality="high" bgcolor="#ffffff" width="$3" height="$4" name="videomat" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>',
+		'extern' => '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="'.$protocol.'fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="300" height="200" id="videomat" align="middle"><param name="allowScriptAccess" value="sameDomain" /><param name="movie" value="http://89.160.51.62/recordMe/play.swf?id=$2" /><param name="loop" value="false" /><param name="quality" value="high" /><param name="bgcolor" value="#ffffff" /><embed src="http://89.160.51.62/recordMe/play.swf?id=$2" loop="false" quality="high" bgcolor="#ffffff" width="$3" height="$4" name="videomat" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" /></object>',
 		'default_ratio' => 300 / 200
 	),
 	'vimeo' => array(
-		'url'=>'http://vimeo.com/moogaloop.swf?clip_id=$1&;server=vimeo.com&fullscreen=0&show_title=1&show_byline=1&show_portrait=0'
+		'url'=>$protocol.'vimeo.com/moogaloop.swf?clip_id=$1&;server=vimeo.com&fullscreen=0&show_title=1&show_byline=1&show_portrait=0'
 	)
 );
